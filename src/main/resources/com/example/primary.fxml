@@ -17,15 +17,17 @@
     - xmlns: Standard JavaFX 8 namespace declarations
     - fx:controller: Links this view to its controller class
 -->
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
-   
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController"
+      styleClass="root-vbox" stylesheets="@styles.css">
+
    <!-- Children elements contained within the VBox -->
    <children>
       <!-- 
           Label component displaying text 
           - text="Primary View": The text to display
       -->
-      <Label text="Primary Viewssss" />
+      <Label text="Primary Viewsssss" styleClass="title-label" />
       
       <!-- 
           Button component 
@@ -33,7 +35,8 @@
           - text="Switch to Secondary View": Text displayed on the button
           - onAction="#switchToSecondary": Method to call when button is clicked
       -->
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary" 
+              styleClass="modern-button" />
    </children>
    
    <!-- 
