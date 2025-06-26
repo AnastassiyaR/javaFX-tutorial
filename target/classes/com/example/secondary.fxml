@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Secondary View FXML Definition
+    This file defines the UI layout for the secondary screen of the JavaFX application.
+    It follows the same pattern as primary.fxml but with different content and controller.
+-->
+
+<!-- Import necessary JavaFX classes -->
+<?import javafx.scene.layout.VBox?>       <!-- Vertical box layout container -->
+<?import javafx.scene.control.Label?>     <!-- Text label component -->
+<?import javafx.scene.control.Button?>    <!-- Interactive button component -->
+<?import javafx.geometry.Insets?>         <!-- Utility for padding definitions -->
+
+<!-- 
+    Root VBox Container Configuration:
+    - Centered alignment of child elements
+    - 20px vertical spacing between children
+    - Standard JavaFX 8 namespace declarations
+    - Linked to SecondaryController class
+-->
+<VBox alignment="CENTER" spacing="20.0" 
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.example.SecondaryController">
+    
+    <!-- Child elements container -->
+    <children>
+        <!-- 
+            Title Label:
+            - Displays static text "Secondary View"
+            - Automatically sized to fit content
+        -->
+        <Label text="Secondary View hello" />
+        
+        <!-- 
+            Action Button:
+            - Identified as "secondaryButton" for controller reference
+            - Displays text prompting view switch
+            - Triggers switchToPrimary() method in controller when clicked
+        -->
+        <Button fx:id="secondaryButton" 
+                text="Switch to Primary View" 
+                onAction="#switchToPrimary" />
+    </children>
+    
+    <!-- 
+        Padding Configuration:
+        - 20px padding on all sides of the VBox
+        - Creates breathing room between window edges and content
+    -->
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
